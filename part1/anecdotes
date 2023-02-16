@@ -28,7 +28,7 @@ const App = () => {
     setVotes(pointsCopy)
   }
 
-  const bestAnecdoteIndex = votes.indexOf(Math.max(...votes))
+  const anecdoteIndex = votes.indexOf(Math.max(...votes))
   return (
     <div>
       <h1>Anecdote of the day</h1>
@@ -42,8 +42,8 @@ const App = () => {
         text="next anecdote"
       />
       <h1>Anecdote with most votes</h1>
-      <div>{anecdotes[bestAnecdoteIndex]}</div>
-      <div>has {votes[bestAnecdoteIndex]} votes</div>
+      <div>{anecdotes[anecdoteIndex]}</div>
+      <div>has {votes[anecdoteIndex]} votes</div>
     </div>
   )
 }
